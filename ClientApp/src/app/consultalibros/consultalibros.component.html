@@ -1,0 +1,24 @@
+<div>
+  <h1 class="h2"> Lista </h1>
+</div>
+<div>
+  <table class='table '>
+    <thead class="thead-dark">
+      <tr>
+        <th>ISBN</th>
+        <th>Titulo</th>
+        <th>Precio de venta</th>
+        <th>Popular</th>
+        <th>Ver</th>
+
+      </tr>
+    </thead>
+    <tr ngFor="let datoslibros of datoslibrosk">
+      <td>{{Datoslibros.ISBN}}</td>
+      <td>{{Datoslibros.Titulo}}</td>
+      <td>{{Datoslibros.precioVenta}}</td>
+      <td><span *ngIf="Datoslibros.Popular === true;"> <b> Popular</b></span></td>
+      <td><a routerLink="/editarlibros/{{Datoslibros.ISBN}}"> ver </a></td>
+    </tr>
+  </table>
+</div>
